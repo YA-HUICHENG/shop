@@ -11,10 +11,17 @@
     {% include 'main/menu.html' %}
     <h2>歡迎來到我的部落格</h2>
     <br> 
-    {% for product in products %}
+    {% for product, comments in products.items %}
       <h3>{{ product.title }}</h3>
       <p>發表時間：{{ product.pubDateTime|date:'Y-m-d H:i' }}</p>
-      <div class="productContent">{{ product.content|linebreaks  }}</div>
+      <div class="productContent">{{ product.content|linebreaks|truncatechars_html:30 }}</div>
+      {% for comment in comments %}
+        <div class="commentDiv">
+          <span class="comment">{{ comment.content }}</span>
+          <br>
+          <span class="commentTime">{{ comment.pubDateTime|date:'m月d日 H:i' }}</span>
+        </div>
+      {% endfor %}
       <hr>
     {% endfor %}
   </body>
