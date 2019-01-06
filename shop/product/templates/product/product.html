@@ -5,9 +5,17 @@
     <title>部落格</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'product/css/product.css' %}">
   </head>
   <body>
     {% include 'main/menu.html' %}
-    <h2>部落格說 -- Hello world!</h2> 
+    <h2>歡迎來到我的部落格</h2>
+    <br> 
+    {% for product in products %}
+      <h3>{{ product.title }}</h3>
+      <p>發表時間：{{ product.pubDateTime|date:'Y-m-d H:i' }}</p>
+      <div class="productContent">{{ product.content|linebreaks  }}</div>
+      <hr>
+    {% endfor %}
   </body>
 </html>
