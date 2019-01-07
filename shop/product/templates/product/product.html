@@ -10,9 +10,12 @@
   <body>
     {% include 'main/menu.html' %}
     <h2>歡迎來到我的部落格</h2>
+    {% for message in messages %}
+      <p class="{{ message.tags }}">{{ message }}</p>
+    {% endfor %}
     <p><a class="btn" href="{% url 'product:productCreate' %}">新增文章</a></p> 
     {% for product, comments in products.items %}
-       <h3 class="inlineBlock"><a href="{% url 'product:productRead' product.id %}">{{ product.title }}</a></h3>
+      <h3 class="inlineBlock"><a href="{% url 'product:productRead' product.id %}">{{ product.title }}</a></h3>
       <form class="inlineBlock" method="post" action="{% url 'product:productDelete' product.id %}">
         {% csrf_token %}
         <input class="btn" type="submit" value="刪除">

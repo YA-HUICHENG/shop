@@ -25,16 +25,14 @@ def productCreate(request):
     if request.method == 'GET':
         print(ProductForm())
         return render(request, template, {'productForm':ProductForm()})
-    
     # POST
     productForm = ProductForm(request.POST)
     if not productForm.is_valid():
         return render(request, template, {'productForm':productForm})
-
+    
     productForm.save()
     messages.success(request, '文章已新增')
     return redirect('product:product')
-
 def productRead(request, productId):
     '''
     Read an product
@@ -48,7 +46,6 @@ def productRead(request, productId):
         'comments': Comment.objects.filter(product=product)
     }
     return render(request, 'product/productRead.html', context)
-
 def productUpdate(request, productId):
     '''
     Update the product instance:
@@ -57,7 +54,7 @@ def productUpdate(request, productId):
         3. If the form is valid, save it to the model, otherwise render a
            bound form with error messages
     '''
-    product = get_object_or_404(product, id=productId)
+    product = get_object_or_404(Product, id=productId)
     template = 'product/productCreateUpdate.html'
     if request.method == 'GET':
         productForm = ProductForm(instance=product)
@@ -71,13 +68,17 @@ def productUpdate(request, productId):
     productForm.save()
     messages.success(request, '文章已修改') 
     return redirect('product:productRead', productId=productId)
+def productDelete(request, productId):
+    '''
+    Delete the product instance:
+        1. Render the product page if the method is GET
+        2. Get the product to delete; redirect to 404 if not found
+    '''
+    if request.method == 'GET':
+        return product(request)
 
-    def productDelete(request, productId):
-        '''
-        Delete the product instance:
-            1. Render the product page if the method is GET
-            2. Get the product to delete; redirect to 404 if not found
-        '''
-        # TODO: finish the code
-        return render(request, 'product/product.html')
-# Create your views here.
+    # POST
+    product = get_object_or_404(Product, id=productId)
+    product.delete()
+    messages.success(request, '文章已刪除')  
+    return redirect('product:product')
