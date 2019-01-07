@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   height: 100%;
@@ -9,13 +13,19 @@ body {
   background-repeat: repeat;
 }
 
+.candy{
+  font-size:5em;
+}
 ul#menu {
-  margin-bottom: 30px;
-  text-align: right;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 ul#menu li {
   display: inline-block;
+}
+ul#menu li a {
+  text-decoration:none;
 }
 /* Button */
 .btn {
