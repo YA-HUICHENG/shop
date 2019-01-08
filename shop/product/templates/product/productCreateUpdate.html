@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <html>
   <head>
-    <title>部落格</title>
+   <title>Candy Shop</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'product/css/product.css' %}">
@@ -10,10 +10,10 @@
   <body>
     {% include 'main/menu.html' %}
     {% if productForm.instance.id %}
-      <h2>修改文章</h2>
+      <h2>修改產品</h2>
       <form method="post" action="{% url 'product:productUpdate' productForm.instance.id %}">
     {% else %}
-      <h2>新增文章</h2>
+      <h2>新增產品</h2>
       <form method="post" action="{% url 'product:productCreate' %}">
     {% endif %}
       {% csrf_token %}

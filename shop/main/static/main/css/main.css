@@ -2,19 +2,50 @@
   box-sizing: border-box;
 }
 
-html, body {
+body {
   margin: 0;
-  height: 100%;
+  padding: 0;
+  border: 1px solid blue;
+}
+
+div#wrapper {
+  margin: 0 auto;
+  width: 100%;
+  /*border: 1px solid green;*/
 }
 
 body {
   padding: 20px;
-  background: url("/static/main/img/background.png") fixed;
+  /*background: url("/static/main/img/background.png") fixed;*/
   background-repeat: repeat;
+}
+
+nav {
+  background: url("/static/main/img/1.jpg") ;
+  background-position:30px 70px;　
+  background-repeat:no-repeat;
+  height: 10em;
+  /*border: 1px solid black;*/
+}
+
+header {
+  height: 6em;
+  border: 1px solid red;
+}
+
+div#content {
+  width: 150m;
+  height: 38em;
+  border: 1px solid brown;
+}
+
+footer {
+  border: 1px solid chocolate;
 }
 
 .candy{
   font-size:5em;
+  
 }
 ul#menu {
   margin-bottom: 15px;

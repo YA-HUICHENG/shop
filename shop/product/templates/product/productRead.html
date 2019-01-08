@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <html>
   <head>
-    <title>部落格</title>
+    <title>Candy Shop</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'product/css/product.css' %}">
@@ -11,7 +11,9 @@
     {% include 'main/menu.html' %}
     {% include 'main/messages.html' %}
     <h3 class="inlineBlock">{{ product.title }}</h3>
+    {% if user.is_superuser %}
     <a class="btn inlineBlock" href="{% url 'product:productUpdate' product.id %}">修改</a>
+    {% endif %}
     <p>發表時間：{{ product.pubDateTime|date:'Y-m-d H:i' }}</p>
     <div class="productContent">{{ product.content|linebreaks }}</div>
     {% for comment in comments %}

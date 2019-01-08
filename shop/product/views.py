@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from product.models import Product, Comment
 from product.forms import ProductForm
-
+from main.views import admin_required
 
 def product(request):
     '''
@@ -14,6 +15,7 @@ def product(request):
     context = {'products':products}
     return render(request, 'product/product.html', context)
 
+@admin_required
 def productCreate(request):
     '''
     Create a new product instance
@@ -46,6 +48,8 @@ def productRead(request, productId):
         'comments': Comment.objects.filter(product=product)
     }
     return render(request, 'product/productRead.html', context)
+
+@admin_required
 def productUpdate(request, productId):
     '''
     Update the product instance:
@@ -68,6 +72,8 @@ def productUpdate(request, productId):
     productForm.save()
     messages.success(request, '文章已修改') 
     return redirect('product:productRead', productId=productId)
+
+@admin_required
 def productDelete(request, productId):
     '''
     Delete the product instance:

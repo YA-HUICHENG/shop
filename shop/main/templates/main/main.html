@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   </head>
   <body>
-    {% include 'main/menu.html' %}
-    <h2>Django 說 -- Hello world!</h2>
+  <div id="wrapper">
+  <nav>這是nav{% include 'main/menu.html' %}</nav>
+  <header>這是header</header>
+  <div id="content">這是content
+  <h2>Django 說 -- Hello world!</h2>
     <p>{{ like }}</p>
+  </div>
+  <footer>這是footer</footer>
+</div>  <!-- wrapper -->
   </body>
 </html>
