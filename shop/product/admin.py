@@ -14,4 +14,5 @@ class CommentModelAdmin(admin.ModelAdmin):
 admin.site.register(Product)
 admin.site.register(Comment, CommentModelAdmin)
 
+
 # Register your models here.

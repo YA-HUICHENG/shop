@@ -8,4 +8,4 @@ class ProductForm(forms.ModelForm):
     price = forms.CharField(label='價格', widget=forms.NumberInput())
     class Meta:
         model = Product
-        fields = ['title', 'content']
+        fields = ['title', 'content','price']

@@ -4,7 +4,7 @@ from product.models import Product, Comment
 
 titles = ['如何像電腦科學家一樣思考', '10分鐘內學好Python', '簡單學習Django']
 comments = ['文章真棒', '並不認同您的觀點', '借分享', '學好一個程式語言或框架並不容易']
-
+price = ['100','200']
 
 def populate():
     print('Populating products and comments ... ', end='')
@@ -14,9 +14,10 @@ def populate():
     for title in titles:
         product = Product()
         product.title = title
-        for j in range(20):
+        for j in range(40):
             product.content += title + '\n'
         product.save()
+        product.price = price
         for comment in comments:
             Comment.objects.create(product=product, content=comment)
     print('done')

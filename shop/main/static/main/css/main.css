@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
 }
-
-body {
+html,body {
   margin: 0;
   padding: 0;
+  bankground-repeat: no-repeat;
   border: 1px solid blue;
 }
 
@@ -14,32 +14,33 @@ div#wrapper {
   /*border: 1px solid green;*/
 }
 
-body {
-  padding: 20px;
-  /*background: url("/static/main/img/background.png") fixed;*/
-  background-repeat: repeat;
-}
-
 nav {
-  background: url("/static/main/img/1.jpg") ;
-  background-position:30px 70px;　
+  width: 100%;
+  background: url("/static/main/img/.png") ;
+  background-position:80px 0px;　
   background-repeat:no-repeat;
   height: 10em;
   /*border: 1px solid black;*/
 }
 
 header {
-  height: 6em;
+  width: 100%;
+  height: 3em;
   border: 1px solid red;
 }
 
 div#content {
   width: 150m;
-  height: 38em;
+  height: 35em;
   border: 1px solid brown;
+  background: url("/static/main/img/7.png");
+  background-repeat:no-repeat;
+  background-size:150em 40em ;
+  background-position:0px 0px;　
 }
 
 footer {
+  height: 4em;
   border: 1px solid chocolate;
 }
 
@@ -47,8 +48,21 @@ footer {
   font-size:5em;
   
 }
+ul#candy {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+ul#candy li {
+  display: inline-block;
+}
+ul#candy li a {
+  text-decoration:none;
+}
 ul#menu {
-  margin-bottom: 15px;
+  font-family:cursive;
+  font-size:1em;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -57,6 +71,30 @@ ul#menu li {
 }
 ul#menu li a {
   text-decoration:none;
+}
+ul#about {
+  margin-bottom: 15px;
+  text-align: center;
+}
+footer ul {
+  margin: 0;
+  padding: 0.5em 0em 0em 0em;
+  text-align: center;
+}
+
+footer li {                    /* 做最少量的設定，大多數的設定在 <a> */
+  display: inline-block;    /* 行內區塊顯示，因此允許橫向排列 */
+  margin-right: 1em;        /* 按鈕間距 */
+}
+
+footer li a {                  /* 大多數的按鈕外觀在此設定 */
+  display: block;           /* 區塊顯示，因此允許設定 padding */
+  color: black;
+  text-decoration: none;
+  padding: 0.5em 2em;       /* 按鈕尺寸由 <a> 撐開 */
+  background-color: lightgray;
+  border-radius: 10px;
+  border: 1px solid black;  
 }
 /* Button */
 .btn {
