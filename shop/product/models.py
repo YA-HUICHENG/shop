@@ -26,14 +26,5 @@ class Comment(models.Model):
     class Meta:
         ordering = ['pubDateTime']
         
-class Cart(object):
-    def __init__(self, *args, **kwargs):
-        self.items = []
-        self.total_price = 0
-    def add_product(self,product):
-        self.total_price += product.price
-        for item in self.items:
-            if item.product.id == product.id:
-                item.quantity += 1
-        return self.items.append(Product(product=product,unit_price=product.price,quantity=1))    
+ 
 # Create your models here.
