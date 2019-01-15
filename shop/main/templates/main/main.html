@@ -7,13 +7,45 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   </head>
   <body>
+  
   <div id="wrapper">
   <nav>這是nav{% include 'main/menu.html' %}</nav>
   <header>這是header</header>
+  
   <div id="content">這是content
-  <h2>Django 說 -- Hello world!</h2>
-    <p>{{ like }}</p>
-  </div>
+     <table border="0">
+      <tr>
+          <td> <div class="pic">
+      <div>
+      <img src="{% static 'main/img/1.jpg'%}" alt="pure css3 slider" />
+      <span class="info"></span>
+      </div> 
+      <div>
+        <img src="{% static 'main/img/2.jpg'%}" alt="pure css3 slider" />
+        <span class="info"></span>
+      </div> 
+      <div>
+        <img src="{% static 'main/img/3.jpg'%}" alt="pure css3 slider" />
+        <span class="info"></span>
+      </div> 
+      <div>
+        <img src="{% static 'main/img/4.jpg'%}" alt="pure css3 slider" />
+        <span class="info"></span>
+      </div> 
+      <div>
+        <img src="{% static 'main/img/5.jpg'%}" alt="pure css3 slider" />
+        <span class="info"></span>
+      </div> 
+    </div>
+    </td>
+    </tr>
+      <tr>
+        <td><h1 class="us">新年系列</h1></td>
+      </tr>
+      <tr>
+        <td><img src="{% static 'main/img/.12jpg'%}"></td>
+      </tr>
+    </table>
 </div>  <!-- wrapper -->
   </body>
 </html>
