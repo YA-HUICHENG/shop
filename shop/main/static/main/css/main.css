@@ -44,6 +44,12 @@ div#content {
 
 .candy{
   font-size:5em;
+  text-align: center;
+  font-family: cursive;
+  color:#FFBB00;
+  font-weight: bold;
+  text-shadow: 0 5px 0px #009FCC;
+  font-style:oblique;
   
 }
 ul#candy {
@@ -59,7 +65,7 @@ ul#candy li a {
 }
 ul#menu {
   font-family:cursive;
-  font-size:1em;
+  font-size:1.2em;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -69,12 +75,18 @@ ul#menu li {
 }
 ul#menu li a {
   text-decoration:none;
+  padding: 0.5em 0.5em; 
+  
 }
 ul#about {
   margin-bottom: 15px;
   text-align: center;
 }
 
+a#m:hover{
+  color: red;
+  font-size:1.4em;
+}
 /* Button */
 .btn {
   font-family: Arial;
@@ -192,10 +204,22 @@ div#content .pic{
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
 }
-.new{
-  font-size: 1.5em;
-  padding-left: 0em;
+.s2{
+  padding-right:2em;
+  padding-left:7.5em;
 }
-table{
-  padding: 0 0em;
+.s1{
+  width:30em;
+  height:25em;
+}
+.s3{
+  padding-right:2em;
+  padding-left:2em;
+}
+.s4{
+  padding-left:2em;
+  padding-right:7.5em;
+}
+.us{
+  padding-left:4em;
 }
