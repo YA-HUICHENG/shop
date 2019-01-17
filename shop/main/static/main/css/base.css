@@ -33,7 +33,7 @@ header {
 
 div#content {
   width: 100％;
-  height:auto;
+  height:38em;
   background:url("/static/main/img/back.png") ;
   background-attachment: scoll;
   background-repeat: no-repeat;
@@ -44,15 +44,14 @@ div#content {
 
 
 .candy{
-  font-size:6em;
+  font-size:5em;
   text-align: center;
   font-family: cursive;
+  color:#FFBB00;
   font-weight: bold;
-  color:blue;
-  font-style:oblique;
   text-shadow: 0 5px 0px #009FCC;
-  padding-top:0.2em;
-  
+  font-style:oblique;
+  padding-top:0.5em;
 }
 ul#candy {
   margin-bottom: 40px;
@@ -129,9 +128,8 @@ div#content .pic{
 .pic img{
     height:30em;
     width:60em;
-    padding: 2em 0em;
+    padding: 1em 0em;
 }
-
 .pic div {
     position: absolute;
     top: 0;
@@ -141,39 +139,39 @@ div#content .pic{
     padding:0em 26.5em;
 }
 .pic div {
-    -webkit-animation: round 20s linear infinite;
-            animation: round 20s linear infinite;
+    -webkit-animation: round 25s linear infinite;
+            animation: round 25s linear infinite;
 }
 
 @-webkit-keyframes round {
-    5% {
+    4% {
         opacity: 1;
         filter: alpha(opacity=100);
         /* 0 - 1蝘� 瘛∪��*/
     }
-    25% {
+    15% {
         opacity: 1;
         filter: alpha(opacity=100);
         /* 1- 5蝘㘾�𨀣迫*/
     }
-    30% {
+    20% {
         opacity: 0;
         filter: alpha(opacity=0);
         /* 5-6蝘埝楚�枂*/
     }
 }
 @keyframes round {
-    5% {
+    4% {
         opacity: 1;
         filter: alpha(opacity=100);
         /* 0 - 1蝘� 瘛∪��*/
     }
-    25% {
+    20% {
         opacity: 1;
         filter: alpha(opacity=100);
         /* 1- 5蝘㘾�𨀣迫*/
     }
-    30% {
+    24% {
         opacity: 0;
         filter: alpha(opacity=0);
         /* 5-6蝘埝楚�枂*/
@@ -203,10 +201,10 @@ div#content .pic{
     -webkit-animation-delay: 16s;
             animation-delay: 16s;
 }
-/*.pic:hover div {
+.pic:hover div {
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
-}*/
+}
 .s2{
   padding-right:2em;
   padding-left:7.5em;
@@ -225,9 +223,9 @@ div#content .pic{
   padding-right:7.5em;
 }
 .new{
-  font-size:1.2em;
-  padding-left:7em;
-  color:red;
+  padding-left:8em;
   font-weight: bold;
-  text-shadow: 0 3px 0px #444444;
+  color:#FF0000
+  font-weight: bold;
+  text-shadow: 0 5px 0px #009FCC;
 }

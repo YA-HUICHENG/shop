@@ -14,7 +14,16 @@ def about(request):
     '''
     return render(request, 'main/about.html')
 # Create your views here.
-
+def buy(request):
+    '''
+    Render the buy page
+    '''
+    return render(request, 'main/buy.html')
+def call(request):
+    '''
+    Render the call page
+    '''
+    return render(request, 'main/call.html')
 def admin_required(func):
     def auth(request, *args, **kwargs):
         if not request.user.is_superuser:

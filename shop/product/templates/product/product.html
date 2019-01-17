@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="{% static 'product/css/product.css' %}">
   </head>
   <body>
-    {% include 'main/menu.html' %}
-    <h2>歡迎來到Candy Shop</h2>
+   <div id="wrapper">
+  <nav>{% include 'main/menu.html' %}</nav>
+  <header></header>
+  
+  <div id="content">
+     <h2>歡迎來到Candy Shop</h2>
     {% for message in messages %}
       <p class="{{ message.tags }}">{{ message }}</p>
     {% endfor %}
@@ -36,5 +40,7 @@
       {% endfor %}
       <hr>
     {% endfor %}
+</div>  <!-- wrapper -->
+    
   </body>
 </html>

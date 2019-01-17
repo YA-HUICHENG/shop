@@ -9,10 +9,10 @@
   <body>
   
   <div id="wrapper">
-  <nav>這是nav{% include 'main/menu.html' %}</nav>
-  <header>這是header</header>
+  <nav>{% include 'main/menu.html' %}</nav>
+  <header></header>
   
-  <div id="content">這是content
+  <div id="content">
      <table border="0">
       <tr>
           <td> <div class="pic">
@@ -40,7 +40,7 @@
     </td>
     </tr>
       <tr>
-        <td><h1 class="us">新年系列</h1></td>
+        <td class="new"><h1 >新年系列</h1></td>
       </tr>
        <tr >
         <td class='s2'><img class="s1" src="{% static 'main/img/11.jpg'%}"></td>
