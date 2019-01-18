@@ -1,5 +1,5 @@
 from django.contrib import admin
-from product.models import Product, Comment
+from product.models import Product, Comment,Order
 
 class CommentModelAdmin(admin.ModelAdmin):
     list_display = ['product', 'content']
@@ -14,6 +14,7 @@ class CommentModelAdmin(admin.ModelAdmin):
 
 admin.site.register(Product)
 admin.site.register(Comment, CommentModelAdmin)
+admin.site.register(Order)
 
 
 # Register your models here.

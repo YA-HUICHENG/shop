@@ -26,5 +26,14 @@ class Comment(models.Model):
     class Meta:
         ordering = ['pubDateTime']
         
- 
+class Order(models.Model):
+    Name = models.CharField(max_length=128)
+    adress = models.CharField(max_length=128)
+    phone = models.CharField(max_length=12)
+    number= models.IntegerField()
+
+
+
+    def __str__(self):
+        return self.Name
 # Create your models here.
