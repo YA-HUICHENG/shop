@@ -99,12 +99,12 @@ def order(request):
     '''
     template = 'product/order.html'
     if request.method == 'GET':
-        print(OrderForm())
         return render(request, template, {'orderForm':OrderForm()})
     # POST
     orderForm = OrderForm(request.POST)
     if not orderForm.is_valid():
         return render(request, template, {'orderForm':orderForm})
-
+    
     orderForm.save()
-    return order(request)
+    messages.success(request, '購買資訊已新增')
+    return redirect('product:product')

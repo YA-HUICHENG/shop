@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <html>
   <head>
-    <title>部落格</title>
+    <title>Candy Shop</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'product/css/product.css' %}">
@@ -13,10 +13,11 @@
   <header></header>
   
   <div id="content">
-     <h2>歡迎來到Candy Shop</h2>
-    {% for message in messages %}
+     <h1 class='we'>歡迎來到Candy Shop</h1>
+    <p>{% for message in messages %}</p>
       <p class="{{ message.tags }}">{{ message }}</p>
     {% endfor %}
+    <img class='bb' src="{% static 'main/img/13.jpg'%}" alt="pure css3 slider" />
     {% if user.is_superuser %}
     <p><a class="btn" href="{% url 'product:productCreate' %}">新增產品</a></p> 
     {% endif %}
@@ -28,7 +29,7 @@
         <input class="btn" type="submit" value="刪除">
       </form>
       {% endif %}
-      <div class="productContent">{{ product.content|linebreaks}}</div>
+      <div class="productContent">{{ product.content|linebreaks|truncatechars_html:40}}</div>
       <p>價格：{{product.price }}</p>
       <p><a class="btn" href="{% url 'product:order' %}">購買商品</a></p>
       {% for comment in comments %}

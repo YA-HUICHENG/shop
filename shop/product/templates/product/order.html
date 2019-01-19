@@ -2,18 +2,25 @@
 {% load staticfiles %}
 <html>
 <head>
-<title>部落格</title>
+<title>Candy Shop</title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'product/css/order.css' %}">
 <link rel="stylesheet" href="{% static 'product/css/product.css' %}">
 </head>
 <body>
-{% include 'main/menu.html' %}
-<h2>新增文章</h2>
+<div id="wrapper">
+  <nav>{% include 'main/menu.html' %}</nav>
+  <header></header>
+  
+<div id="conten">
+<h2>聯絡人資訊</h2>
 <form method="post" action="{% url 'product:order' %}">
   {% csrf_token %}
   {{ orderForm.as_p }}
-  <input type="submit" value="送出">
+  <input class="btn" type="submit" value="送出">
+  <a class="btn" href="{% url 'product:product' %}">取消</a>
 </form>
+</div>
+</div>
 </body>
 </html>

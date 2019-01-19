@@ -5,7 +5,7 @@ html,body {
   margin: 0;
   padding: 0;
   bankground-repeat: no-repeat;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 
 div#wrapper {
@@ -38,20 +38,21 @@ div#content {
   background-attachment: scoll;
   background-repeat: no-repeat;
   background-position:left bottom;
-  border: 1px solid brown;
+  /*border: 1px solid brown;*/
   background-size:cover;
 }
 
 
 .candy{
-  font-size:5em;
+  font-size:6em;
   text-align: center;
   font-family: cursive;
-  color:#FFBB00;
   font-weight: bold;
-  text-shadow: 0 5px 0px #009FCC;
+  color:blue;
   font-style:oblique;
-  padding-top:0.5em;
+  text-shadow: 0 5px 0px #009FCC;
+  padding-top:0.2em;
+  
 }
 ul#candy {
   margin-bottom: 40px;
@@ -83,7 +84,6 @@ ul#about {
   margin-bottom: 15px;
   text-align: center;
 }
-
 a#m:hover{
   color: red;
   font-size:1.4em;

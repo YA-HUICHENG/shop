@@ -5,7 +5,7 @@ html,body {
   margin: 0;
   padding: 0;
   bankground-repeat: no-repeat;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 
 div#wrapper {
@@ -38,7 +38,7 @@ div#content {
   background-attachment: scoll;
   background-repeat: no-repeat;
   background-position:left bottom;
-  border: 1px solid brown;
+  /*border: 1px solid brown;*/
   background-size:cover;
 }
 

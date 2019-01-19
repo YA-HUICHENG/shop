@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+html,body {
+  margin: 0;
+  padding: 0;
+  bankground-repeat: no-repeat;
+  /*border: 1px solid blue;*/
+}
+
+div#wrapper {
+  margin: 0 auto;
+  width: 100%;
+  hight:auto;
+  /*border: 1px solid green;*/
+}
+
+nav {
+  width: 100%;
+  background: url("/static/main/img/.png") ;
+  /*background-position:80px 0px;　*/
+  background-repeat:no-repeat;
+  height: 10em;
+  /*border: 1px solid black;*/
+}
+
+header {
+  width: 100%;
+  height: 3em;
+  /*border: 1px solid red;*/
+  background-color:#E0FFFF;
+}
+
+div#conten {
+  width: 100％;
+  height:36em;
+  background:url("/static/main/img/back.png") ;
+  background-attachment: scoll;
+  background-repeat: no-repeat;
+  background-position:left bottom;
+  /*border: 1px solid brown;*/
+  background-size:cover;
+}
+
+
+.candy{
+  font-size:6em;
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+  color:blue;
+  font-style:oblique;
+  text-shadow: 0 5px 0px #009FCC;
+  padding-top:0.2em;
+  
+}
+ul#candy {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+ul#candy li {
+  display: inline-block;
+}
+ul#candy li a {
+  text-decoration:none;
+}
+ul#menu {
+  font-family:cursive;
+  font-size:1.2em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+ul#menu li {
+  display: inline-block;
+}
+ul#menu li a {
+  text-decoration:none;
+  padding: 0.5em 0.5em; 
+  
+}
+ul#about {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+a#m:hover{
+  color: red;
+  font-size:1.4em;
+}
+/* Button */
+.btn {
+  font-family: Arial;
+  display: inline-block;
+  color: black;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border: thin solid gray;
+  background: linear-gradient(#f7f7f7, #dedede);
+}
+ /* Messages */
+.success, .error {
+  padding: 1em 0 1em 3em;
+}
+
+.success {
+  background-color: #ddffdd;
+  border: thin solid green;
+}
+
+.error {
+  background-color: #fbd9d8;
+  border: thin solid red;
+}
+/* Misc */
+.inlineBlock {
+  display: inline-block;
+}
