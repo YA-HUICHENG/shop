@@ -30,7 +30,7 @@
       {% endif %}
       <div class="productContent">{{ product.content|linebreaks}}</div>
       <p>價格：{{product.price }}</p>
-      <button type="submit" name="order" class="btn btn-default">購買</button>
+      <p><a class="btn" href="{% url 'product:order' %}">購買商品</a></p>
       {% for comment in comments %}
         <div class="commentDiv">
           <span class="comment">{{ comment.content }}</span>
