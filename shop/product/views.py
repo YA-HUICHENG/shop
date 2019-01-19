@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from product.models import Product, Comment
 from product.forms import ProductForm
 from main.views import admin_required
+from product.forms import OrderForm
 
 def product(request):
     '''
@@ -91,10 +92,12 @@ def productDelete(request, productId):
 
 def order(request):
     '''
-    Create a new article instance
+    Create a new order instance
         1. If method is GET, render an empty form
         2. If method is POST, perform form validation and display error messages if the form is invalid
-        3. Save the form to the model and redirect the user to the article page
+        3. Save the form to the model and redirect the user to the order page
     '''
-    # TODO: finish the code
-    return render(request, 'product/order.html')
+    template = 'product/order.html'
+    if request.method == 'GET':
+        return render(request, template, {'orderForm':OrderForm()})
+    
