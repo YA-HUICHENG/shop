@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+html,body {
+  margin: 0;
+  padding: 0;
+  bankground-repeat: no-repeat;
+  border: 1px solid blue;
+}
+
+div#wrapper {
+  margin: 0 auto;
+  width: 100%;
+  hight:auto;
+  /*border: 1px solid green;*/
+}
+
+nav {
+  width: 100%;
+  background: url("/static/main/img/.png") ;
+  /*background-position:80px 0px;　*/
+  background-repeat:no-repeat;
+  height: 10em;
+  /*border: 1px solid black;*/
+}
+
+header {
+  width: 100%;
+  height: 3em;
+  /*border: 1px solid red;*/
+  background-color:#E0FFFF;
+}
+
+div#content {
+  width: 100％;
+  height:auto;
+  background:url("/static/main/img/back.png") ;
+  background-attachment: scoll;
+  background-repeat: no-repeat;
+  background-position:left bottom;
+  border: 1px solid brown;
+  background-size:cover;
+}
+
+
+.candy{
+  font-size:6em;
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+  color:blue;
+  font-style:oblique;
+  text-shadow: 0 5px 0px #009FCC;
+  padding-top:0.2em;
+  
+}
+ul#candy {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+ul#candy li {
+  display: inline-block;
+}
+ul#candy li a {
+  text-decoration:none;
+}
+ul#menu {
+  font-family:cursive;
+  font-size:1.2em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+ul#menu li {
+  display: inline-block;
+}
+ul#menu li a {
+  text-decoration:none;
+  padding: 0.5em 0.5em; 
+  
+}
+ul#about {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+a#m:hover{
+  color: red;
+  font-size:1.4em;
+}
+/* Button */
+.btn {
+  font-family: Arial;
+  display: inline-block;
+  color: black;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border: thin solid gray;
+  background: linear-gradient(#f7f7f7, #dedede);
+}
+ /* Messages */
+.success, .error {
+  padding: 1em 0 1em 3em;
+}
+
+.success {
+  background-color: #ddffdd;
+  border: thin solid green;
+}
+
+.error {
+  background-color: #fbd9d8;
+  border: thin solid red;
+}
+/* Misc */
+.inlineBlock {
+  display: inline-block;
+}
+div#content {
+  font-weight: bold;
+  width: 100%;
+  padding-right: 23em; /*內縮*/
+  padding-left: 25em; /*內縮*/
+  padding-top: 5em; /*內縮*/
+  padding-bottom: 5em; /*內縮*/
+  height: 100%;
+  float: left;
+  /*border: 1px solid brown;*/
+}
+
+h1#k1{
+  text-align: center;
+  font-weight: bold;     /*字體*/
+  font-style: normal;    /*字體(斜體、正體*/
+  text-transform: none;  /*文字轉換(全大、全小、頭大身小*/
+  text-decoration: none; /*文字裝飾(底線、上線、中間、沒有*/
+  line-height: 1.5em;    /*行高*/
+  border-bottom: 2px solid black;
+}
+
+div#content p.no1 {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5em;    /*行高*/
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+div#content p.no2 {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5em;    /*行高*/
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+div#content p.no3 {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5em;    /*行高*/
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+h1#k2{
+  text-align: center;
+  font-weight: bold;     /*字體*/
+  font-style: normal;    /*字體(斜體、正體*/
+  text-transform: none;  /*文字轉換(全大、全小、頭大身小*/
+  text-decoration: none; /*文字裝飾(底線、上線、中間、沒有*/
+  line-height: 1.5em;    /*行高*/
+  border-bottom: 2px solid black;
+}
+
+div#content p.no4 {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5em;    /*行高*/
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+footer {
+  font-weight: bold;     /*字體*/
+  font-style: normal;    /*字體(斜體、正體*/
+  letter-spacing: 0.5em; /*間距*/
+  text-align: center;    /*對齊*/
+  border-top: 3px solid black;
+}
+
+div#content h2.no5 {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5em;    /*行高*/
+  width: 100%;
+  height: 100%;
+  float: left;
+}

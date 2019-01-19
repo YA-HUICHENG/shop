@@ -5,13 +5,37 @@
     <title>Candy Shop</title>
     <meta charset="utf-8">
         <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'main/about.css' %}">
   </head>
   <body>
   <div id="wrapper">
   <nav>{% include 'main/menu.html' %}</nav>
   <header></header>
   
-  <div id="content">
+  <div id="content" class='ab'>
+     <h1>關於糖果小舖Candy</h1>
+      <p class='abb'>
+      為了看到顧客歡樂的笑容，我們樂於創新，並將我們的創新分享給所有的朋友，讓大家都能從分享中得到歡樂。<br><br>
+    
+    糖，我們做了30年，顧客眼中的糖，對我們而言不只是糖，而是一份信任和託付。<br>
+    因此，天然、健康是我們唯一的訴求，除了良好的品質控管。<br>
+    創新，也是我們不斷追求的核心，因為我們樂於分享，所以一直追求更新與更好。<br>
+    分享，在於看見每位顧客歡樂的笑容，也證明了我們存在的價值。<br><br>
+    
+    從小舖，走進大型百貨，我們都不曾離開過，每一個期待的笑容，我們都相當重視。<br>
+    如家人、朋友般的存在，陪伴您每個歡笑的時刻，也豐富精彩您的生活。<br><br>
+    
+    因為你們，我們一直都在。<br>
+    無論何時得意，都給您真摯的問候，不論每分每秒，都更專注於您的需求。<br>
+    您的每一個笑容，都是我們前進的動力。<br><br>
+    
+    糖果小舖，不只是一個品牌，更是為了歡樂與歡笑而存在<br><br>
+     </p>
+      <div class="jpg">
+       <img class="jp" src="{% static 'main/img/no1-1.jpg'%}" alt="pure css3 slider" />
+      <img  class="jp" src="{% static 'main/img/no2-1.jpg'%}" alt="pure css3 slider" />
+      <img class="jp" src="{% static 'main/img/no3-1.jpg'%}" alt="pure css3 slider" />
+       </div>
      
 </div>  <!-- wrapper -->
   </body>

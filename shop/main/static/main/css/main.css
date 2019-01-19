@@ -231,3 +231,22 @@ div#content .pic{
   font-weight: bold;
   text-shadow: 0 3px 0px #444444;
 }
+div#content.ab {
+  font-weight: bold;
+  width: 100%;
+  padding-left: 30em;
+  padding-right: 25em; 
+  padding-top: 4em; 
+  padding-bottom: 4em;
+  height: 100%;
+  float: left;
+  /*border: 1px solid brown;*/
+}
+.abb{
+  font-size:1.5em;
+}
+.jp{
+  height:30em;
+    width:60em;
+    padding:1em;
+}
