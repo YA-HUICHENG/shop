@@ -20,13 +20,37 @@ input[type=text] {
   padding: 0.4em;
 }
 div#content{
-  padding:0em 25em;
+  padding:0em 15em;
 }
 div#conten{
   padding:0em 40em;
   
 }
-img.bb{
-  width:30em;
+img.b1{
+  width:28em;
   height:20em;
+  padding-top:7em;
 }
+img.b2{
+  width:28em;
+  height:20em;
+  padding-top:6em;
+}
+img.b3{
+  width:28em;
+  height:20em;
+  padding-bottom:5em;
+}
+img.b4{
+  width:28em;
+  height:25em;
+  padding-top:5em;
+}
+img.b5{
+  width:28em;
+  height:25em;
+  padding-bottom:5em;
+}
+.td{
+  width:80em;
+

@@ -13,12 +13,17 @@
   <header></header>
   
   <div id="content">
-     <h1 class='we'>歡迎來到Candy Shop</h1>
+  <h1 class='we'>歡迎來到Candy Shop</h1>
     <p>{% for message in messages %}</p>
       <p class="{{ message.tags }}">{{ message }}</p>
-    {% endfor %}
-    <img class='bb' src="{% static 'main/img/13.jpg'%}" alt="pure css3 slider" />
-    {% if user.is_superuser %}
+        {% endfor %} 
+      <table border='1' class='table'>
+    <tr>
+    <td class="it">
+    <img class='b3' src="{% static 'main/img/16.jpeg'%}" alt="pure css3 slider" />
+    <img class='b2' src="{% static 'main/img/15.jpeg'%}" alt="pure css3 slider" />
+     <img class='b1' src="{% static 'main/img/13.jpeg'%}" alt="pure css3 slider" /></td>
+     <td class="td">{% if user.is_superuser %}
     <p><a class="btn" href="{% url 'product:productCreate' %}">新增產品</a></p> 
     {% endif %}
     {% for product, comments in products.items %}
@@ -29,7 +34,7 @@
         <input class="btn" type="submit" value="刪除">
       </form>
       {% endif %}
-      <div class="productContent">{{ product.content|linebreaks|truncatechars_html:40}}</div>
+      <div class="productContent">{{ product.content|linebreaks|truncatechars_html:30}}</div>
       <p>價格：{{product.price }}</p>
       <p><a class="btn" href="{% url 'product:order' %}">購買商品</a></p>
       {% for comment in comments %}
@@ -41,6 +46,9 @@
       {% endfor %}
       <hr>
     {% endfor %}
+    </td>
+    </tr>
+ </table>
 </div>  <!-- wrapper -->
     
   </body>

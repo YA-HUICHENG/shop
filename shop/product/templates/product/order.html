@@ -17,6 +17,15 @@
 <form method="post" action="{% url 'product:order' %}">
   {% csrf_token %}
   {{ orderForm.as_p }}
+  <label for=date>選擇商品:&nbsp;</label>    
+        <select name=room class="choice">
+        <option value=room  class='oo'>抹茶巧克力</option>
+          <option value=room  class='oo'>葡萄軟糖</option>
+          <option value=room  class='oo'> 北極熊驚喜糖 </option>
+          <option value=room  class='oo'>婚禮棉花糖</option>
+          <option value=room class='oo'>金幣糖</option>
+        </select>
+  <br>
   <input class="btn" type="submit" value="送出">
   <a class="btn" href="{% url 'product:product' %}">取消</a>
 </form>
